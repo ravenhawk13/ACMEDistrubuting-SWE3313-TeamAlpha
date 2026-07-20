@@ -1,4 +1,6 @@
-﻿namespace ACMEDistrubuting_SWE3313_TeamAlpha
+﻿using ACMEDistrubuting_SWE3313_TeamAlpha.Models;
+using ACMEDistrubuting_SWE3313_TeamAlpha.Services;
+namespace ACMEDistrubuting_SWE3313_TeamAlpha
 {
     partial class associatePortal
     {
@@ -244,7 +246,7 @@
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.Location = new Point(294, 219);
+            quantityLabel.Location = new Point(294, 196);
             quantityLabel.Name = "quantityLabel";
             quantityLabel.Size = new Size(53, 15);
             quantityLabel.TabIndex = 10;
@@ -262,7 +264,7 @@
             // productLabel
             // 
             productLabel.AutoSize = true;
-            productLabel.Location = new Point(11, 221);
+            productLabel.Location = new Point(11, 196);
             productLabel.Name = "productLabel";
             productLabel.Size = new Size(49, 15);
             productLabel.TabIndex = 8;
@@ -280,7 +282,7 @@
             // quantityBox
             // 
             quantityBox.Font = new Font("Segoe UI", 13F);
-            quantityBox.Location = new Point(289, 239);
+            quantityBox.Location = new Point(289, 212);
             quantityBox.Name = "quantityBox";
             quantityBox.Size = new Size(166, 31);
             quantityBox.TabIndex = 5;
@@ -288,7 +290,7 @@
             // productBox
             // 
             productBox.Font = new Font("Segoe UI", 13F);
-            productBox.Location = new Point(11, 239);
+            productBox.Location = new Point(11, 212);
             productBox.Name = "productBox";
             productBox.Size = new Size(276, 31);
             productBox.TabIndex = 4;

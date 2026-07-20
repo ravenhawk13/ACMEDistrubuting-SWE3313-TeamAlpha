@@ -1,0 +1,18 @@
+{
+  "AccountId": "joe",
+  "DeliveryDate": "2026-07-20T00:00:00",
+  "SalesRepId": "j",
+  "DeliveryRepId": "j",
+  "Items": [
+    {
+      "ItemId": "61010",
+      "ItemName": "61010",
+      "Quantity": 15
+    },
+    {
+      "ItemId": "3D BLUE 12/16 CAN",
+      "ItemName": "3D BLUE 12/16 CAN",
+      "Quantity": 10
+    }
+  ]
+}
