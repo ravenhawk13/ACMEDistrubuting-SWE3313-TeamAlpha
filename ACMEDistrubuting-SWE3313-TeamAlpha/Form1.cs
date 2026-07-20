@@ -67,5 +67,16 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             addCustomerPanel.Visible = true;
             customerSbmPanel.Visible = false;
         }
+        private void backToMenuButton_Click(object sender, EventArgs e)
+        {
+            customerSbmPanel.Visible = false;
+            CCPanel.Visible = true;
+        }
+
+        private void cstmCancelButton_Click(object sender, EventArgs e)
+        {
+            addCustomerPanel.Visible = false;
+            customerSbmPanel.Visible = true;
+        }
     }
 }

@@ -76,6 +76,8 @@
             pictureBox2 = new PictureBox();
             addCustomerButton = new Button();
             searchCustomerBox = new TextBox();
+            customerListBox = new ListBox();
+            backToMenuButton = new Button();
             cstmrMgmtButton = new Label();
             loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPicture).BeginInit();
@@ -404,6 +406,8 @@
             customerSbmPanel.Controls.Add(addCustomerButton);
             customerSbmPanel.Controls.Add(searchCustomerBox);
             customerSbmPanel.Controls.Add(cstmrMgmtButton);
+            customerSbmPanel.Controls.Add(customerListBox);
+            customerSbmPanel.Controls.Add(backToMenuButton);
             customerSbmPanel.Location = new Point(0, 0);
             customerSbmPanel.Name = "customerSbmPanel";
             customerSbmPanel.Size = new Size(594, 650);
@@ -448,6 +452,7 @@
             cstmCancelButton.TabIndex = 17;
             cstmCancelButton.Text = "Cancel";
             cstmCancelButton.UseVisualStyleBackColor = true;
+            cstmCancelButton.Click += cstmCancelButton_Click;
             // 
             // delivConBox
             // 
@@ -625,6 +630,26 @@
             cstmrMgmtButton.TabIndex = 0;
             cstmrMgmtButton.Text = "Customer Management";
             // 
+            // customerListBox
+            // 
+            customerListBox.Font = new Font("Segoe UI", 11F);
+            customerListBox.FormattingEnabled = true;
+            customerListBox.Location = new Point(18, 250);
+            customerListBox.Name = "customerListBox";
+            customerListBox.Size = new Size(558, 300);
+            customerListBox.TabIndex = 4;
+            // 
+            // backToMenuButton
+            // 
+            backToMenuButton.Font = new Font("Segoe UI", 10F);
+            backToMenuButton.Location = new Point(18, 570);
+            backToMenuButton.Name = "backToMenuButton";
+            backToMenuButton.Size = new Size(100, 35);
+            backToMenuButton.TabIndex = 5;
+            backToMenuButton.Text = "Back";
+            backToMenuButton.UseVisualStyleBackColor = true;
+            backToMenuButton.Click += backToMenuButton_Click;
+            // 
             // associatePortal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -707,5 +732,7 @@
         private TextBox delivConBox;
         private Button cstmSubmitButton;
         private Button cstmCancelButton;
+        private ListBox customerListBox;
+        private Button backToMenuButton;
     }
 }
