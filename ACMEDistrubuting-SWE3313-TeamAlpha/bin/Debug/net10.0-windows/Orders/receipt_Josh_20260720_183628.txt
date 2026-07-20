@@ -1,0 +1,11 @@
+Acme Distributing
+
+Account ID#: Josh
+Delivery Date: 07/20/2026
+Sales Rep ID: John Smith
+Delivery Rep ID: John Smith
+
+ID          Item Name                     Quantity  
+ALG White Beer 12/19.2cALG White Beer 12/19.2c       10        
+
+Total Items: 10

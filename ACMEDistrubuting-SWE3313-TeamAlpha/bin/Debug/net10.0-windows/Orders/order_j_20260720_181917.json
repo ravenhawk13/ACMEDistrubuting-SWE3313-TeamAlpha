@@ -1,0 +1,18 @@
+{
+  "AccountId": "j",
+  "DeliveryDate": "2026-07-20T00:00:00",
+  "SalesRepId": "kk",
+  "DeliveryRepId": "kk",
+  "Items": [
+    {
+      "ItemId": "031749 - AlG White beer",
+      "ItemName": "031749 - AlG White beer",
+      "Quantity": 10
+    },
+    {
+      "ItemId": "ALG White beer",
+      "ItemName": "ALG White beer",
+      "Quantity": 15
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "AccountId": "Select Customer",
+  "DeliveryDate": "2026-07-20T00:00:00",
+  "SalesRepId": "josh",
+  "DeliveryRepId": "josh",
+  "Items": [
+    {
+      "ItemId": "beer",
+      "ItemName": "beer",
+      "Quantity": 10
+    },
+    {
+      "ItemId": "wine",
+      "ItemName": "wine",
+      "Quantity": 100
+    }
+  ]
+}
