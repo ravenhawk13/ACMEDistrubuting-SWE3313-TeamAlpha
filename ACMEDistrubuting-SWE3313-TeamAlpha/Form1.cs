@@ -15,16 +15,14 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
 
             CCPanel.Visible = false;
             LogOutPanel.Visible = false;
+            addCustomerPanel.Visible = false;
             OrderProccessPanel.Visible = false;
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
-            loginPanel.Visible = false;
-            customerSbmPanel.Visible = false;
-            
             CCPanel.Visible = true;
 
-
+            loginPanel.Visible = false;
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -44,16 +42,13 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             loginPanel.Visible = true;
         }
 
-        /// <summary>
-        /// TODO: Finish layout etc
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        //TODO: Generate a reciept for the order and must feature a "go back" button to fix any errors for a short time.
         private void orderButton_Click(object sender, EventArgs e)
         {
             OrderProccessPanel.Visible = true;
             CCPanel.Visible = false;
         }
+
 
         private void customerButton_Click(object sender, EventArgs e)
         {
@@ -61,14 +56,16 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             customerSbmPanel.Visible = true;
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void routeButton_Click(object sender, EventArgs e)
         {
+            CCPanel.Visible = false;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addCustomerButton_Click(object sender, EventArgs e)
         {
-
+            addCustomerPanel.Visible = true;
+            customerSbmPanel.Visible = false;
         }
     }
 }

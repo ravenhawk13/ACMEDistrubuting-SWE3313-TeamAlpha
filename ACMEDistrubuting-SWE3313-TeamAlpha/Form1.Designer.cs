@@ -35,17 +35,16 @@
             associateIDBox = new TextBox();
             logoPicture = new PictureBox();
             LogOutPanel = new Panel();
-            label1 = new Label();
+            logOutLabel = new Label();
             LogOutYesButton = new Button();
             LogOutNoButton = new Button();
             OrderProccessPanel = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            orderSbmnLabel = new Label();
             addItemButton = new Button();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            quantityLabel = new Label();
+            orderDateLabel = new Label();
+            productLabel = new Label();
             customerLabel = new Label();
-            textBox4 = new TextBox();
             quantityBox = new TextBox();
             productBox = new TextBox();
             orderDateBox = new TextBox();
@@ -58,10 +57,26 @@
             orderButton = new Button();
             LogOutButton = new Button();
             customerSbmPanel = new Panel();
+            addCustomerPanel = new Panel();
+            cstmSubmitButton = new Button();
+            cstmCancelButton = new Button();
+            delivConBox = new TextBox();
+            pocBox = new TextBox();
+            phoneNumBox = new TextBox();
+            dockCapBox = new TextBox();
+            payMethodBox = new TextBox();
+            beerLicBox = new TextBox();
+            zipBox = new TextBox();
+            stateBox = new TextBox();
+            cityBox = new TextBox();
+            addressBox = new TextBox();
+            fullNameBox = new TextBox();
+            addCstmLogo = new PictureBox();
+            addCustomerLabel = new Label();
             pictureBox2 = new PictureBox();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            label5 = new Label();
+            addCustomerButton = new Button();
+            searchCustomerBox = new TextBox();
+            cstmrMgmtButton = new Label();
             loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPicture).BeginInit();
             LogOutPanel.SuspendLayout();
@@ -70,6 +85,8 @@
             CCPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CCLogo).BeginInit();
             customerSbmPanel.SuspendLayout();
+            addCustomerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)addCstmLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
@@ -82,7 +99,7 @@
             loginPanel.Controls.Add(associateIDBox);
             loginPanel.Controls.Add(logoPicture);
             loginPanel.ForeColor = SystemColors.ControlText;
-            loginPanel.Location = new Point(137, -1);
+            loginPanel.Location = new Point(0, 0);
             loginPanel.Name = "loginPanel";
             loginPanel.Size = new Size(594, 650);
             loginPanel.TabIndex = 0;
@@ -131,7 +148,7 @@
             logoPicture.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             logoPicture.Image = (Image)resources.GetObject("logoPicture.Image");
             logoPicture.InitialImage = (Image)resources.GetObject("logoPicture.InitialImage");
-            logoPicture.Location = new Point(128, 19);
+            logoPicture.Location = new Point(129, 23);
             logoPicture.Name = "logoPicture";
             logoPicture.Size = new Size(327, 169);
             logoPicture.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -142,7 +159,7 @@
             // 
             LogOutPanel.BackColor = Color.FromArgb(224, 224, 224);
             LogOutPanel.BorderStyle = BorderStyle.FixedSingle;
-            LogOutPanel.Controls.Add(label1);
+            LogOutPanel.Controls.Add(logOutLabel);
             LogOutPanel.Controls.Add(LogOutYesButton);
             LogOutPanel.Controls.Add(LogOutNoButton);
             LogOutPanel.ForeColor = SystemColors.ActiveCaptionText;
@@ -151,15 +168,15 @@
             LogOutPanel.Size = new Size(234, 149);
             LogOutPanel.TabIndex = 5;
             // 
-            // label1
+            // logOutLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13F);
-            label1.Location = new Point(54, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 25);
-            label1.TabIndex = 2;
-            label1.Text = "Log Out?";
+            logOutLabel.AutoSize = true;
+            logOutLabel.Font = new Font("Segoe UI", 13F);
+            logOutLabel.Location = new Point(54, 20);
+            logOutLabel.Name = "logOutLabel";
+            logOutLabel.Size = new Size(85, 25);
+            logOutLabel.TabIndex = 2;
+            logOutLabel.Text = "Log Out?";
             // 
             // LogOutYesButton
             // 
@@ -188,38 +205,32 @@
             // OrderProccessPanel
             // 
             OrderProccessPanel.BorderStyle = BorderStyle.FixedSingle;
-            OrderProccessPanel.Controls.Add(tableLayoutPanel1);
+            OrderProccessPanel.Controls.Add(orderSbmnLabel);
             OrderProccessPanel.Controls.Add(addItemButton);
-            OrderProccessPanel.Controls.Add(label4);
-            OrderProccessPanel.Controls.Add(label3);
-            OrderProccessPanel.Controls.Add(label2);
+            OrderProccessPanel.Controls.Add(quantityLabel);
+            OrderProccessPanel.Controls.Add(orderDateLabel);
+            OrderProccessPanel.Controls.Add(productLabel);
             OrderProccessPanel.Controls.Add(customerLabel);
-            OrderProccessPanel.Controls.Add(textBox4);
             OrderProccessPanel.Controls.Add(quantityBox);
             OrderProccessPanel.Controls.Add(productBox);
             OrderProccessPanel.Controls.Add(orderDateBox);
             OrderProccessPanel.Controls.Add(SelectCustomerBox);
             OrderProccessPanel.Controls.Add(pictureBox1);
-            OrderProccessPanel.Location = new Point(137, -1);
+            OrderProccessPanel.Location = new Point(0, 0);
             OrderProccessPanel.Name = "OrderProccessPanel";
             OrderProccessPanel.Size = new Size(594, 650);
             OrderProccessPanel.TabIndex = 2;
             OrderProccessPanel.Visible = false;
             // 
-            // tableLayoutPanel1
+            // orderSbmnLabel
             // 
-            tableLayoutPanel1.ColumnCount = 4;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Location = new Point(11, 300);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(564, 279);
-            tableLayoutPanel1.TabIndex = 12;
+            orderSbmnLabel.AutoSize = true;
+            orderSbmnLabel.Font = new Font("Segoe UI", 15F);
+            orderSbmnLabel.Location = new Point(196, 9);
+            orderSbmnLabel.Name = "orderSbmnLabel";
+            orderSbmnLabel.Size = new Size(168, 28);
+            orderSbmnLabel.TabIndex = 12;
+            orderSbmnLabel.Text = "Order Submission";
             // 
             // addItemButton
             // 
@@ -230,32 +241,32 @@
             addItemButton.Text = "Add Item";
             addItemButton.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // quantityLabel
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(294, 219);
-            label4.Name = "label4";
-            label4.Size = new Size(53, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Quantity";
+            quantityLabel.AutoSize = true;
+            quantityLabel.Location = new Point(294, 219);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new Size(53, 15);
+            quantityLabel.TabIndex = 10;
+            quantityLabel.Text = "Quantity";
             // 
-            // label3
+            // orderDateLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(305, 143);
-            label3.Name = "label3";
-            label3.Size = new Size(64, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Order Date";
+            orderDateLabel.AutoSize = true;
+            orderDateLabel.Location = new Point(305, 143);
+            orderDateLabel.Name = "orderDateLabel";
+            orderDateLabel.Size = new Size(64, 15);
+            orderDateLabel.TabIndex = 9;
+            orderDateLabel.Text = "Order Date";
             // 
-            // label2
+            // productLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(11, 221);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Product";
+            productLabel.AutoSize = true;
+            productLabel.Location = new Point(11, 221);
+            productLabel.Name = "productLabel";
+            productLabel.Size = new Size(49, 15);
+            productLabel.TabIndex = 8;
+            productLabel.Text = "Product";
             // 
             // customerLabel
             // 
@@ -265,15 +276,6 @@
             customerLabel.Size = new Size(59, 15);
             customerLabel.TabIndex = 7;
             customerLabel.Text = "Customer";
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 20F);
-            textBox4.Location = new Point(194, 3);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(213, 43);
-            textBox4.TabIndex = 6;
-            textBox4.Text = "Order Processing";
             // 
             // quantityBox
             // 
@@ -290,6 +292,7 @@
             productBox.Name = "productBox";
             productBox.Size = new Size(276, 31);
             productBox.TabIndex = 4;
+            productBox.Text = "Select Product";
             // 
             // orderDateBox
             // 
@@ -298,6 +301,7 @@
             orderDateBox.Name = "orderDateBox";
             orderDateBox.Size = new Size(290, 31);
             orderDateBox.TabIndex = 3;
+            orderDateBox.Text = "MM/DD/YYYY";
             // 
             // SelectCustomerBox
             // 
@@ -324,15 +328,15 @@
             // CCPanel
             // 
             CCPanel.BorderStyle = BorderStyle.FixedSingle;
+            CCPanel.Controls.Add(LogOutPanel);
             CCPanel.Controls.Add(routeButton);
             CCPanel.Controls.Add(customerButton);
             CCPanel.Controls.Add(CCLogo);
             CCPanel.Controls.Add(orderButton);
             CCPanel.Controls.Add(LogOutButton);
-            CCPanel.Controls.Add(LogOutPanel);
-            CCPanel.Location = new Point(171, -1);
+            CCPanel.Location = new Point(0, 0);
             CCPanel.Name = "CCPanel";
-            CCPanel.Size = new Size(500, 650);
+            CCPanel.Size = new Size(594, 650);
             CCPanel.TabIndex = 1;
             // 
             // routeButton
@@ -344,6 +348,7 @@
             routeButton.TabIndex = 3;
             routeButton.Text = "Routes Determination";
             routeButton.UseVisualStyleBackColor = true;
+            routeButton.Click += routeButton_Click;
             // 
             // customerButton
             // 
@@ -363,7 +368,7 @@
             CCLogo.InitialImage = (Image)resources.GetObject("CCLogo.InitialImage");
             CCLogo.Location = new Point(148, 19);
             CCLogo.Name = "CCLogo";
-            CCLogo.Size = new Size(233, 172);
+            CCLogo.Size = new Size(327, 172);
             CCLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             CCLogo.TabIndex = 1;
             CCLogo.TabStop = false;
@@ -396,13 +401,185 @@
             // customerSbmPanel
             // 
             customerSbmPanel.Controls.Add(pictureBox2);
-            customerSbmPanel.Controls.Add(button1);
-            customerSbmPanel.Controls.Add(textBox1);
-            customerSbmPanel.Controls.Add(label5);
-            customerSbmPanel.Location = new Point(119, 3);
+            customerSbmPanel.Controls.Add(addCustomerButton);
+            customerSbmPanel.Controls.Add(searchCustomerBox);
+            customerSbmPanel.Controls.Add(cstmrMgmtButton);
+            customerSbmPanel.Location = new Point(0, 0);
             customerSbmPanel.Name = "customerSbmPanel";
-            customerSbmPanel.Size = new Size(608, 650);
+            customerSbmPanel.Size = new Size(594, 650);
             customerSbmPanel.TabIndex = 6;
+            // 
+            // addCustomerPanel
+            // 
+            addCustomerPanel.Controls.Add(cstmSubmitButton);
+            addCustomerPanel.Controls.Add(cstmCancelButton);
+            addCustomerPanel.Controls.Add(delivConBox);
+            addCustomerPanel.Controls.Add(pocBox);
+            addCustomerPanel.Controls.Add(phoneNumBox);
+            addCustomerPanel.Controls.Add(dockCapBox);
+            addCustomerPanel.Controls.Add(payMethodBox);
+            addCustomerPanel.Controls.Add(beerLicBox);
+            addCustomerPanel.Controls.Add(zipBox);
+            addCustomerPanel.Controls.Add(stateBox);
+            addCustomerPanel.Controls.Add(cityBox);
+            addCustomerPanel.Controls.Add(addressBox);
+            addCustomerPanel.Controls.Add(fullNameBox);
+            addCustomerPanel.Controls.Add(addCstmLogo);
+            addCustomerPanel.Controls.Add(addCustomerLabel);
+            addCustomerPanel.Location = new Point(0, 0);
+            addCustomerPanel.Name = "addCustomerPanel";
+            addCustomerPanel.Size = new Size(594, 650);
+            addCustomerPanel.TabIndex = 7;
+            // 
+            // cstmSubmitButton
+            // 
+            cstmSubmitButton.Location = new Point(306, 614);
+            cstmSubmitButton.Name = "cstmSubmitButton";
+            cstmSubmitButton.Size = new Size(75, 23);
+            cstmSubmitButton.TabIndex = 18;
+            cstmSubmitButton.Text = "Submit";
+            cstmSubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // cstmCancelButton
+            // 
+            cstmCancelButton.Location = new Point(213, 614);
+            cstmCancelButton.Name = "cstmCancelButton";
+            cstmCancelButton.Size = new Size(75, 23);
+            cstmCancelButton.TabIndex = 17;
+            cstmCancelButton.Text = "Cancel";
+            cstmCancelButton.UseVisualStyleBackColor = true;
+            // 
+            // delivConBox
+            // 
+            delivConBox.BorderStyle = BorderStyle.FixedSingle;
+            delivConBox.Font = new Font("Segoe UI", 12F);
+            delivConBox.Location = new Point(214, 467);
+            delivConBox.Name = "delivConBox";
+            delivConBox.Size = new Size(189, 29);
+            delivConBox.TabIndex = 16;
+            delivConBox.Text = "Delivery Constraints";
+            // 
+            // pocBox
+            // 
+            pocBox.BorderStyle = BorderStyle.FixedSingle;
+            pocBox.Font = new Font("Segoe UI", 12F);
+            pocBox.Location = new Point(214, 516);
+            pocBox.Name = "pocBox";
+            pocBox.Size = new Size(188, 29);
+            pocBox.TabIndex = 15;
+            pocBox.Text = "POC";
+            // 
+            // phoneNumBox
+            // 
+            phoneNumBox.BorderStyle = BorderStyle.FixedSingle;
+            phoneNumBox.Font = new Font("Segoe UI", 12F);
+            phoneNumBox.Location = new Point(214, 561);
+            phoneNumBox.Name = "phoneNumBox";
+            phoneNumBox.Size = new Size(188, 29);
+            phoneNumBox.TabIndex = 14;
+            phoneNumBox.Text = "Phone #";
+            // 
+            // dockCapBox
+            // 
+            dockCapBox.BorderStyle = BorderStyle.FixedSingle;
+            dockCapBox.Font = new Font("Segoe UI", 12F);
+            dockCapBox.Location = new Point(215, 423);
+            dockCapBox.Name = "dockCapBox";
+            dockCapBox.Size = new Size(189, 29);
+            dockCapBox.TabIndex = 12;
+            dockCapBox.Text = "Loading Dock Capabilities";
+            // 
+            // payMethodBox
+            // 
+            payMethodBox.BorderStyle = BorderStyle.FixedSingle;
+            payMethodBox.Font = new Font("Segoe UI", 12F);
+            payMethodBox.Location = new Point(216, 376);
+            payMethodBox.Name = "payMethodBox";
+            payMethodBox.Size = new Size(189, 29);
+            payMethodBox.TabIndex = 11;
+            payMethodBox.Text = "Payment Method";
+            // 
+            // beerLicBox
+            // 
+            beerLicBox.BorderStyle = BorderStyle.FixedSingle;
+            beerLicBox.Font = new Font("Segoe UI", 12F);
+            beerLicBox.Location = new Point(216, 334);
+            beerLicBox.Name = "beerLicBox";
+            beerLicBox.Size = new Size(189, 29);
+            beerLicBox.TabIndex = 10;
+            beerLicBox.Text = "Beer License #";
+            // 
+            // zipBox
+            // 
+            zipBox.BorderStyle = BorderStyle.FixedSingle;
+            zipBox.Font = new Font("Segoe UI", 12F);
+            zipBox.Location = new Point(215, 291);
+            zipBox.Name = "zipBox";
+            zipBox.Size = new Size(189, 29);
+            zipBox.TabIndex = 9;
+            zipBox.Text = "Zip";
+            // 
+            // stateBox
+            // 
+            stateBox.BorderStyle = BorderStyle.FixedSingle;
+            stateBox.Font = new Font("Segoe UI", 12F);
+            stateBox.Location = new Point(215, 249);
+            stateBox.Name = "stateBox";
+            stateBox.Size = new Size(189, 29);
+            stateBox.TabIndex = 8;
+            stateBox.Text = "State";
+            // 
+            // cityBox
+            // 
+            cityBox.BorderStyle = BorderStyle.FixedSingle;
+            cityBox.Font = new Font("Segoe UI", 12F);
+            cityBox.Location = new Point(215, 205);
+            cityBox.Name = "cityBox";
+            cityBox.Size = new Size(189, 29);
+            cityBox.TabIndex = 7;
+            cityBox.Text = "City";
+            // 
+            // addressBox
+            // 
+            addressBox.BorderStyle = BorderStyle.FixedSingle;
+            addressBox.Font = new Font("Segoe UI", 12F);
+            addressBox.Location = new Point(215, 160);
+            addressBox.Name = "addressBox";
+            addressBox.Size = new Size(189, 29);
+            addressBox.TabIndex = 6;
+            addressBox.Text = "Street Address";
+            // 
+            // fullNameBox
+            // 
+            fullNameBox.BorderStyle = BorderStyle.FixedSingle;
+            fullNameBox.Font = new Font("Segoe UI", 12F);
+            fullNameBox.Location = new Point(214, 115);
+            fullNameBox.Name = "fullNameBox";
+            fullNameBox.Size = new Size(189, 29);
+            fullNameBox.TabIndex = 5;
+            fullNameBox.Text = "Full name";
+            // 
+            // addCstmLogo
+            // 
+            addCstmLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            addCstmLogo.Image = (Image)resources.GetObject("addCstmLogo.Image");
+            addCstmLogo.InitialImage = (Image)resources.GetObject("addCstmLogo.InitialImage");
+            addCstmLogo.Location = new Point(437, 1);
+            addCstmLogo.Name = "addCstmLogo";
+            addCstmLogo.Size = new Size(157, 105);
+            addCstmLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            addCstmLogo.TabIndex = 4;
+            addCstmLogo.TabStop = false;
+            // 
+            // addCustomerLabel
+            // 
+            addCustomerLabel.AutoSize = true;
+            addCustomerLabel.Font = new Font("Segoe UI", 15F);
+            addCustomerLabel.Location = new Point(245, 20);
+            addCustomerLabel.Name = "addCustomerLabel";
+            addCustomerLabel.Size = new Size(138, 28);
+            addCustomerLabel.TabIndex = 0;
+            addCustomerLabel.Text = "Add Customer";
             // 
             // pictureBox2
             // 
@@ -411,42 +588,42 @@
             pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
             pictureBox2.Location = new Point(418, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(190, 104);
+            pictureBox2.Size = new Size(176, 104);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
-            // button1
+            // addCustomerButton
             // 
-            button1.BackColor = Color.Silver;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 15F);
-            button1.Location = new Point(440, 191);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 50);
-            button1.TabIndex = 2;
-            button1.Text = "Add customer";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            addCustomerButton.BackColor = Color.Silver;
+            addCustomerButton.FlatStyle = FlatStyle.Flat;
+            addCustomerButton.Font = new Font("Segoe UI", 15F);
+            addCustomerButton.Location = new Point(440, 191);
+            addCustomerButton.Name = "addCustomerButton";
+            addCustomerButton.Size = new Size(154, 50);
+            addCustomerButton.TabIndex = 2;
+            addCustomerButton.Text = "Add customer";
+            addCustomerButton.UseVisualStyleBackColor = false;
+            addCustomerButton.Click += addCustomerButton_Click;
             // 
-            // textBox1
+            // searchCustomerBox
             // 
-            textBox1.Font = new Font("Segoe UI", 15F);
-            textBox1.Location = new Point(18, 202);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(179, 34);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Search Customer";
+            searchCustomerBox.Font = new Font("Segoe UI", 15F);
+            searchCustomerBox.Location = new Point(18, 202);
+            searchCustomerBox.Name = "searchCustomerBox";
+            searchCustomerBox.Size = new Size(179, 34);
+            searchCustomerBox.TabIndex = 1;
+            searchCustomerBox.Text = "Search Customer";
             // 
-            // label5
+            // cstmrMgmtButton
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F);
-            label5.Location = new Point(171, 26);
-            label5.Name = "label5";
-            label5.Size = new Size(217, 28);
-            label5.TabIndex = 0;
-            label5.Text = "Customer Management";
+            cstmrMgmtButton.AutoSize = true;
+            cstmrMgmtButton.Font = new Font("Segoe UI", 15F);
+            cstmrMgmtButton.Location = new Point(171, 26);
+            cstmrMgmtButton.Name = "cstmrMgmtButton";
+            cstmrMgmtButton.Size = new Size(217, 28);
+            cstmrMgmtButton.TabIndex = 0;
+            cstmrMgmtButton.Text = "Customer Management";
             // 
             // associatePortal
             // 
@@ -455,8 +632,9 @@
             ClientSize = new Size(879, 661);
             Controls.Add(loginPanel);
             Controls.Add(CCPanel);
-            Controls.Add(customerSbmPanel);
             Controls.Add(OrderProccessPanel);
+            Controls.Add(customerSbmPanel);
+            Controls.Add(addCustomerPanel);
             Name = "associatePortal";
             Text = "Associate Portal";
             Load += Form1_Load;
@@ -472,6 +650,9 @@
             ((System.ComponentModel.ISupportInitialize)CCLogo).EndInit();
             customerSbmPanel.ResumeLayout(false);
             customerSbmPanel.PerformLayout();
+            addCustomerPanel.ResumeLayout(false);
+            addCustomerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)addCstmLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
@@ -489,7 +670,7 @@
         private Button routeButton;
         private Button customerButton;
         internal Button loginButton;
-        private Label label1;
+        private Label logOutLabel;
         private Button LogOutNoButton;
         private Button LogOutYesButton;
         private Panel LogOutPanel;
@@ -499,17 +680,32 @@
         private TextBox productBox;
         private TextBox orderDateBox;
         private TextBox quantityBox;
-        private TextBox textBox4;
         private Button addItemButton;
-        private Label label4;
-        private Label label3;
-        private Label label2;
+        private Label quantityLabel;
+        private Label orderDateLabel;
+        private Label productLabel;
         private Label customerLabel;
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel customerSbmPanel;
-        private Label label5;
-        private TextBox textBox1;
-        private Button button1;
+        private Label cstmrMgmtButton;
+        private TextBox searchCustomerBox;
+        private Button addCustomerButton;
         private PictureBox pictureBox2;
+        private Label orderSbmnLabel;
+        private Panel addCustomerPanel;
+        private TextBox addressBox;
+        private TextBox fullNameBox;
+        private PictureBox addCstmLogo;
+        private Label addCustomerLabel;
+        private TextBox pocBox;
+        private TextBox phoneNumBox;
+        private TextBox dockCapBox;
+        private TextBox payMethodBox;
+        private TextBox beerLicBox;
+        private TextBox zipBox;
+        private TextBox stateBox;
+        private TextBox cityBox;
+        private TextBox delivConBox;
+        private Button cstmSubmitButton;
+        private Button cstmCancelButton;
     }
 }
