@@ -7,6 +7,8 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
 {
     public partial class associatePortal : Form
     {
+        private readonly RouteDeterminationControl routeDeterminationControl;
+
         // --- Order submission state ---------------------------------------------------
 
         /// <summary>Items added to the order currently being built, before submission.</summary>
@@ -27,6 +29,13 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         public associatePortal()
         {
             InitializeComponent();
+
+            routeDeterminationControl = new RouteDeterminationControl(
+                SampleRouteCustomers.Create());
+            routeDeterminationControl.Visible = false;
+            routeDeterminationControl.BackRequested +=
+                routeDeterminationControl_BackRequested;
+            Controls.Add(routeDeterminationControl);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,6 +46,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             LogOutPanel.Visible = false;
             addCustomerPanel.Visible = false;
             OrderProccessPanel.Visible = false;
+            routeDeterminationControl.Visible = false;
 
             productCatalog = ProductCatalogService.LoadCatalog();
 
@@ -148,6 +158,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         {
             LogOutPanel.Visible = false;
             CCPanel.Visible = false;
+            routeDeterminationControl.Visible = false;
             loginPanel.Visible = true;
         }
 
@@ -166,6 +177,17 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         private void routeButton_Click(object sender, EventArgs e)
         {
             CCPanel.Visible = false;
+            routeDeterminationControl.Visible = true;
+            routeDeterminationControl.BringToFront();
+        }
+
+        private void routeDeterminationControl_BackRequested(
+            object? sender,
+            EventArgs e)
+        {
+            routeDeterminationControl.Visible = false;
+            CCPanel.Visible = true;
+            CCPanel.BringToFront();
         }
 
         private void addCustomerButton_Click(object sender, EventArgs e)

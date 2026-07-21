@@ -349,7 +349,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             routeButton.Font = new Font("Segoe UI", 12F);
             routeButton.Location = new Point(227, 416);
             routeButton.Name = "routeButton";
-            routeButton.Size = new Size(185, 60);
+            routeButton.Size = new Size(185, 71);
             routeButton.TabIndex = 3;
             routeButton.Text = "Routes Determination";
             routeButton.UseVisualStyleBackColor = true;
