@@ -8,26 +8,24 @@
     "net10.0-windows": []
   },
   "packageFolders": {
-    "C:\\Users\\Rocke\\.nuget\\packages\\": {}
+    "C:\\Users\\skinn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
+      "projectUniqueName": "C:\\Users\\skinn\\OneDrive\\Documents\\programs\\school\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
       "projectName": "ACMEDistrubuting-SWE3313-TeamAlpha",
-      "projectPath": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
-      "packagesPath": "C:\\Users\\Rocke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\obj\\",
+      "projectPath": "C:\\Users\\skinn\\OneDrive\\Documents\\programs\\school\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
+      "packagesPath": "C:\\Users\\skinn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\skinn\\OneDrive\\Documents\\programs\\school\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rocke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\skinn\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
