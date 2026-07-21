@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACMEDistrubuting-SWE3313-TeamAlpha")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09cd3de84341f9c4a01640a5e0b178a5ee1722cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6ebb69c8f4a1a21de7d168cf4996ca3cf30e07e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACMEDistrubuting-SWE3313-TeamAlpha")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACMEDistrubuting-SWE3313-TeamAlpha")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

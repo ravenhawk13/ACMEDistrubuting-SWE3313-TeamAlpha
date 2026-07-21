@@ -59,6 +59,10 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             orderButton = new Button();
             LogOutButton = new Button();
             customerSbmPanel = new Panel();
+            pictureBox2 = new PictureBox();
+            addCustomerButton = new Button();
+            searchCustomerBox = new TextBox();
+            cstmrMgmtButton = new Label();
             addCustomerPanel = new Panel();
             cstmSubmitButton = new Button();
             cstmCancelButton = new Button();
@@ -75,10 +79,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             fullNameBox = new TextBox();
             addCstmLogo = new PictureBox();
             addCustomerLabel = new Label();
-            pictureBox2 = new PictureBox();
-            addCustomerButton = new Button();
-            searchCustomerBox = new TextBox();
-            cstmrMgmtButton = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logoPicture).BeginInit();
             LogOutPanel.SuspendLayout();
@@ -87,21 +88,21 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             CCPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CCLogo).BeginInit();
             customerSbmPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             addCustomerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)addCstmLogo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // loginPanel
             // 
-            loginPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            loginPanel.Anchor = AnchorStyles.None;
             loginPanel.BorderStyle = BorderStyle.FixedSingle;
             loginPanel.Controls.Add(loginButton);
             loginPanel.Controls.Add(passwordBox);
             loginPanel.Controls.Add(associateIDBox);
             loginPanel.Controls.Add(logoPicture);
             loginPanel.ForeColor = SystemColors.ControlText;
-            loginPanel.Location = new Point(0, 0);
+            loginPanel.Location = new Point(123, -1);
             loginPanel.Name = "loginPanel";
             loginPanel.Size = new Size(594, 650);
             loginPanel.TabIndex = 0;
@@ -165,7 +166,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             LogOutPanel.Controls.Add(LogOutYesButton);
             LogOutPanel.Controls.Add(LogOutNoButton);
             LogOutPanel.ForeColor = SystemColors.ActiveCaptionText;
-            LogOutPanel.Location = new Point(125, 198);
+            LogOutPanel.Location = new Point(196, 239);
             LogOutPanel.Name = "LogOutPanel";
             LogOutPanel.Size = new Size(234, 149);
             LogOutPanel.TabIndex = 5;
@@ -206,6 +207,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // 
             // OrderProccessPanel
             // 
+            OrderProccessPanel.Anchor = AnchorStyles.None;
             OrderProccessPanel.BorderStyle = BorderStyle.FixedSingle;
             OrderProccessPanel.Controls.Add(orderSbmnLabel);
             OrderProccessPanel.Controls.Add(addItemButton);
@@ -218,7 +220,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             OrderProccessPanel.Controls.Add(orderDateBox);
             OrderProccessPanel.Controls.Add(SelectCustomerBox);
             OrderProccessPanel.Controls.Add(pictureBox1);
-            OrderProccessPanel.Location = new Point(0, 0);
+            OrderProccessPanel.Location = new Point(123, -1);
             OrderProccessPanel.Name = "OrderProccessPanel";
             OrderProccessPanel.Size = new Size(594, 650);
             OrderProccessPanel.TabIndex = 2;
@@ -292,18 +294,18 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             productBox.Font = new Font("Segoe UI", 13F);
             productBox.Location = new Point(11, 212);
             productBox.Name = "productBox";
+            productBox.PlaceholderText = "Select Product";
             productBox.Size = new Size(276, 31);
             productBox.TabIndex = 4;
-            productBox.Text = "Select Product";
             // 
             // orderDateBox
             // 
             orderDateBox.Font = new Font("Segoe UI", 13F);
             orderDateBox.Location = new Point(305, 161);
             orderDateBox.Name = "orderDateBox";
+            orderDateBox.PlaceholderText = "MM/DD/YYYY";
             orderDateBox.Size = new Size(290, 31);
             orderDateBox.TabIndex = 3;
-            orderDateBox.Text = "MM/DD/YYYY";
             // 
             // SelectCustomerBox
             // 
@@ -311,9 +313,9 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             SelectCustomerBox.Font = new Font("Segoe UI", 13F);
             SelectCustomerBox.Location = new Point(11, 162);
             SelectCustomerBox.Name = "SelectCustomerBox";
+            SelectCustomerBox.PlaceholderText = "Select Customer";
             SelectCustomerBox.Size = new Size(277, 31);
             SelectCustomerBox.TabIndex = 2;
-            SelectCustomerBox.Text = "Select Customer";
             // 
             // pictureBox1
             // 
@@ -329,6 +331,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // 
             // CCPanel
             // 
+            CCPanel.Anchor = AnchorStyles.None;
             CCPanel.BorderStyle = BorderStyle.FixedSingle;
             CCPanel.Controls.Add(LogOutPanel);
             CCPanel.Controls.Add(routeButton);
@@ -336,7 +339,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             CCPanel.Controls.Add(CCLogo);
             CCPanel.Controls.Add(orderButton);
             CCPanel.Controls.Add(LogOutButton);
-            CCPanel.Location = new Point(0, 0);
+            CCPanel.Location = new Point(123, -1);
             CCPanel.Name = "CCPanel";
             CCPanel.Size = new Size(594, 650);
             CCPanel.TabIndex = 1;
@@ -344,7 +347,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // routeButton
             // 
             routeButton.Font = new Font("Segoe UI", 12F);
-            routeButton.Location = new Point(156, 375);
+            routeButton.Location = new Point(227, 416);
             routeButton.Name = "routeButton";
             routeButton.Size = new Size(185, 60);
             routeButton.TabIndex = 3;
@@ -355,7 +358,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // customerButton
             // 
             customerButton.Font = new Font("Segoe UI", 12F);
-            customerButton.Location = new Point(156, 276);
+            customerButton.Location = new Point(227, 317);
             customerButton.Name = "customerButton";
             customerButton.Size = new Size(185, 71);
             customerButton.TabIndex = 2;
@@ -368,7 +371,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             CCLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             CCLogo.Image = (Image)resources.GetObject("CCLogo.Image");
             CCLogo.InitialImage = (Image)resources.GetObject("CCLogo.InitialImage");
-            CCLogo.Location = new Point(148, 19);
+            CCLogo.Location = new Point(170, 12);
             CCLogo.Name = "CCLogo";
             CCLogo.Size = new Size(327, 172);
             CCLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -378,7 +381,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // orderButton
             // 
             orderButton.Font = new Font("Segoe UI", 12F);
-            orderButton.Location = new Point(156, 182);
+            orderButton.Location = new Point(227, 223);
             orderButton.Name = "orderButton";
             orderButton.Size = new Size(185, 68);
             orderButton.TabIndex = 1;
@@ -392,7 +395,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             LogOutButton.FlatAppearance.BorderSize = 3;
             LogOutButton.FlatStyle = FlatStyle.Flat;
             LogOutButton.Font = new Font("Segoe UI", 15F);
-            LogOutButton.Location = new Point(156, 483);
+            LogOutButton.Location = new Point(227, 524);
             LogOutButton.Name = "LogOutButton";
             LogOutButton.Size = new Size(168, 84);
             LogOutButton.TabIndex = 0;
@@ -402,186 +405,15 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // 
             // customerSbmPanel
             // 
+            customerSbmPanel.Anchor = AnchorStyles.None;
             customerSbmPanel.Controls.Add(pictureBox2);
             customerSbmPanel.Controls.Add(addCustomerButton);
             customerSbmPanel.Controls.Add(searchCustomerBox);
             customerSbmPanel.Controls.Add(cstmrMgmtButton);
-            customerSbmPanel.Location = new Point(0, 0);
+            customerSbmPanel.Location = new Point(123, -1);
             customerSbmPanel.Name = "customerSbmPanel";
             customerSbmPanel.Size = new Size(594, 650);
             customerSbmPanel.TabIndex = 6;
-            // 
-            // addCustomerPanel
-            // 
-            addCustomerPanel.Controls.Add(cstmSubmitButton);
-            addCustomerPanel.Controls.Add(cstmCancelButton);
-            addCustomerPanel.Controls.Add(delivConBox);
-            addCustomerPanel.Controls.Add(pocBox);
-            addCustomerPanel.Controls.Add(phoneNumBox);
-            addCustomerPanel.Controls.Add(dockCapBox);
-            addCustomerPanel.Controls.Add(payMethodBox);
-            addCustomerPanel.Controls.Add(beerLicBox);
-            addCustomerPanel.Controls.Add(zipBox);
-            addCustomerPanel.Controls.Add(stateBox);
-            addCustomerPanel.Controls.Add(cityBox);
-            addCustomerPanel.Controls.Add(addressBox);
-            addCustomerPanel.Controls.Add(fullNameBox);
-            addCustomerPanel.Controls.Add(addCstmLogo);
-            addCustomerPanel.Controls.Add(addCustomerLabel);
-            addCustomerPanel.Location = new Point(0, 0);
-            addCustomerPanel.Name = "addCustomerPanel";
-            addCustomerPanel.Size = new Size(594, 650);
-            addCustomerPanel.TabIndex = 7;
-            // 
-            // cstmSubmitButton
-            // 
-            cstmSubmitButton.Location = new Point(306, 614);
-            cstmSubmitButton.Name = "cstmSubmitButton";
-            cstmSubmitButton.Size = new Size(75, 23);
-            cstmSubmitButton.TabIndex = 18;
-            cstmSubmitButton.Text = "Submit";
-            cstmSubmitButton.UseVisualStyleBackColor = true;
-            // 
-            // cstmCancelButton
-            // 
-            cstmCancelButton.Location = new Point(213, 614);
-            cstmCancelButton.Name = "cstmCancelButton";
-            cstmCancelButton.Size = new Size(75, 23);
-            cstmCancelButton.TabIndex = 17;
-            cstmCancelButton.Text = "Cancel";
-            cstmCancelButton.UseVisualStyleBackColor = true;
-            // 
-            // delivConBox
-            // 
-            delivConBox.BorderStyle = BorderStyle.FixedSingle;
-            delivConBox.Font = new Font("Segoe UI", 12F);
-            delivConBox.Location = new Point(214, 467);
-            delivConBox.Name = "delivConBox";
-            delivConBox.Size = new Size(189, 29);
-            delivConBox.TabIndex = 16;
-            delivConBox.Text = "Delivery Constraints";
-            // 
-            // pocBox
-            // 
-            pocBox.BorderStyle = BorderStyle.FixedSingle;
-            pocBox.Font = new Font("Segoe UI", 12F);
-            pocBox.Location = new Point(214, 516);
-            pocBox.Name = "pocBox";
-            pocBox.Size = new Size(188, 29);
-            pocBox.TabIndex = 15;
-            pocBox.Text = "POC";
-            // 
-            // phoneNumBox
-            // 
-            phoneNumBox.BorderStyle = BorderStyle.FixedSingle;
-            phoneNumBox.Font = new Font("Segoe UI", 12F);
-            phoneNumBox.Location = new Point(214, 561);
-            phoneNumBox.Name = "phoneNumBox";
-            phoneNumBox.Size = new Size(188, 29);
-            phoneNumBox.TabIndex = 14;
-            phoneNumBox.Text = "Phone #";
-            // 
-            // dockCapBox
-            // 
-            dockCapBox.BorderStyle = BorderStyle.FixedSingle;
-            dockCapBox.Font = new Font("Segoe UI", 12F);
-            dockCapBox.Location = new Point(215, 423);
-            dockCapBox.Name = "dockCapBox";
-            dockCapBox.Size = new Size(189, 29);
-            dockCapBox.TabIndex = 12;
-            dockCapBox.Text = "Loading Dock Capabilities";
-            // 
-            // payMethodBox
-            // 
-            payMethodBox.BorderStyle = BorderStyle.FixedSingle;
-            payMethodBox.Font = new Font("Segoe UI", 12F);
-            payMethodBox.Location = new Point(216, 376);
-            payMethodBox.Name = "payMethodBox";
-            payMethodBox.Size = new Size(189, 29);
-            payMethodBox.TabIndex = 11;
-            payMethodBox.Text = "Payment Method";
-            // 
-            // beerLicBox
-            // 
-            beerLicBox.BorderStyle = BorderStyle.FixedSingle;
-            beerLicBox.Font = new Font("Segoe UI", 12F);
-            beerLicBox.Location = new Point(216, 334);
-            beerLicBox.Name = "beerLicBox";
-            beerLicBox.Size = new Size(189, 29);
-            beerLicBox.TabIndex = 10;
-            beerLicBox.Text = "Beer License #";
-            // 
-            // zipBox
-            // 
-            zipBox.BorderStyle = BorderStyle.FixedSingle;
-            zipBox.Font = new Font("Segoe UI", 12F);
-            zipBox.Location = new Point(215, 291);
-            zipBox.Name = "zipBox";
-            zipBox.Size = new Size(189, 29);
-            zipBox.TabIndex = 9;
-            zipBox.Text = "Zip";
-            // 
-            // stateBox
-            // 
-            stateBox.BorderStyle = BorderStyle.FixedSingle;
-            stateBox.Font = new Font("Segoe UI", 12F);
-            stateBox.Location = new Point(215, 249);
-            stateBox.Name = "stateBox";
-            stateBox.Size = new Size(189, 29);
-            stateBox.TabIndex = 8;
-            stateBox.Text = "State";
-            // 
-            // cityBox
-            // 
-            cityBox.BorderStyle = BorderStyle.FixedSingle;
-            cityBox.Font = new Font("Segoe UI", 12F);
-            cityBox.Location = new Point(215, 205);
-            cityBox.Name = "cityBox";
-            cityBox.Size = new Size(189, 29);
-            cityBox.TabIndex = 7;
-            cityBox.Text = "City";
-            // 
-            // addressBox
-            // 
-            addressBox.BorderStyle = BorderStyle.FixedSingle;
-            addressBox.Font = new Font("Segoe UI", 12F);
-            addressBox.Location = new Point(215, 160);
-            addressBox.Name = "addressBox";
-            addressBox.Size = new Size(189, 29);
-            addressBox.TabIndex = 6;
-            addressBox.Text = "Street Address";
-            // 
-            // fullNameBox
-            // 
-            fullNameBox.BorderStyle = BorderStyle.FixedSingle;
-            fullNameBox.Font = new Font("Segoe UI", 12F);
-            fullNameBox.Location = new Point(214, 115);
-            fullNameBox.Name = "fullNameBox";
-            fullNameBox.Size = new Size(189, 29);
-            fullNameBox.TabIndex = 5;
-            fullNameBox.Text = "Full name";
-            // 
-            // addCstmLogo
-            // 
-            addCstmLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            addCstmLogo.Image = (Image)resources.GetObject("addCstmLogo.Image");
-            addCstmLogo.InitialImage = (Image)resources.GetObject("addCstmLogo.InitialImage");
-            addCstmLogo.Location = new Point(437, 1);
-            addCstmLogo.Name = "addCstmLogo";
-            addCstmLogo.Size = new Size(157, 105);
-            addCstmLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            addCstmLogo.TabIndex = 4;
-            addCstmLogo.TabStop = false;
-            // 
-            // addCustomerLabel
-            // 
-            addCustomerLabel.AutoSize = true;
-            addCustomerLabel.Font = new Font("Segoe UI", 15F);
-            addCustomerLabel.Location = new Point(245, 20);
-            addCustomerLabel.Name = "addCustomerLabel";
-            addCustomerLabel.Size = new Size(138, 28);
-            addCustomerLabel.TabIndex = 0;
-            addCustomerLabel.Text = "Add Customer";
             // 
             // pictureBox2
             // 
@@ -613,9 +445,9 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             searchCustomerBox.Font = new Font("Segoe UI", 15F);
             searchCustomerBox.Location = new Point(18, 202);
             searchCustomerBox.Name = "searchCustomerBox";
+            searchCustomerBox.PlaceholderText = "Search Customer";
             searchCustomerBox.Size = new Size(179, 34);
             searchCustomerBox.TabIndex = 1;
-            searchCustomerBox.Text = "Search Customer";
             // 
             // cstmrMgmtButton
             // 
@@ -627,6 +459,194 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             cstmrMgmtButton.TabIndex = 0;
             cstmrMgmtButton.Text = "Customer Management";
             // 
+            // addCustomerPanel
+            // 
+            addCustomerPanel.Anchor = AnchorStyles.None;
+            addCustomerPanel.Controls.Add(cstmSubmitButton);
+            addCustomerPanel.Controls.Add(cstmCancelButton);
+            addCustomerPanel.Controls.Add(delivConBox);
+            addCustomerPanel.Controls.Add(pocBox);
+            addCustomerPanel.Controls.Add(phoneNumBox);
+            addCustomerPanel.Controls.Add(dockCapBox);
+            addCustomerPanel.Controls.Add(payMethodBox);
+            addCustomerPanel.Controls.Add(beerLicBox);
+            addCustomerPanel.Controls.Add(zipBox);
+            addCustomerPanel.Controls.Add(stateBox);
+            addCustomerPanel.Controls.Add(cityBox);
+            addCustomerPanel.Controls.Add(addressBox);
+            addCustomerPanel.Controls.Add(fullNameBox);
+            addCustomerPanel.Controls.Add(addCstmLogo);
+            addCustomerPanel.Controls.Add(addCustomerLabel);
+            addCustomerPanel.Location = new Point(123, -1);
+            addCustomerPanel.Name = "addCustomerPanel";
+            addCustomerPanel.Size = new Size(594, 650);
+            addCustomerPanel.TabIndex = 7;
+            // 
+            // cstmSubmitButton
+            // 
+            cstmSubmitButton.Location = new Point(306, 614);
+            cstmSubmitButton.Name = "cstmSubmitButton";
+            cstmSubmitButton.Size = new Size(75, 23);
+            cstmSubmitButton.TabIndex = 18;
+            cstmSubmitButton.Text = "Submit";
+            cstmSubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // cstmCancelButton
+            // 
+            cstmCancelButton.Location = new Point(213, 614);
+            cstmCancelButton.Name = "cstmCancelButton";
+            cstmCancelButton.Size = new Size(75, 23);
+            cstmCancelButton.TabIndex = 17;
+            cstmCancelButton.Text = "Cancel";
+            cstmCancelButton.UseVisualStyleBackColor = true;
+            // 
+            // delivConBox
+            // 
+            delivConBox.BorderStyle = BorderStyle.FixedSingle;
+            delivConBox.Font = new Font("Segoe UI", 12F);
+            delivConBox.Location = new Point(214, 467);
+            delivConBox.Name = "delivConBox";
+            delivConBox.PlaceholderText = "Delivery Constraints";
+            delivConBox.Size = new Size(189, 29);
+            delivConBox.TabIndex = 16;
+            // 
+            // pocBox
+            // 
+            pocBox.BorderStyle = BorderStyle.FixedSingle;
+            pocBox.Font = new Font("Segoe UI", 12F);
+            pocBox.Location = new Point(214, 516);
+            pocBox.Name = "pocBox";
+            pocBox.PlaceholderText = "POC";
+            pocBox.Size = new Size(188, 29);
+            pocBox.TabIndex = 15;
+            // 
+            // phoneNumBox
+            // 
+            phoneNumBox.BorderStyle = BorderStyle.FixedSingle;
+            phoneNumBox.Font = new Font("Segoe UI", 12F);
+            phoneNumBox.Location = new Point(214, 561);
+            phoneNumBox.Name = "phoneNumBox";
+            phoneNumBox.PlaceholderText = "Phone #";
+            phoneNumBox.Size = new Size(188, 29);
+            phoneNumBox.TabIndex = 14;
+            // 
+            // dockCapBox
+            // 
+            dockCapBox.BorderStyle = BorderStyle.FixedSingle;
+            dockCapBox.Font = new Font("Segoe UI", 12F);
+            dockCapBox.Location = new Point(215, 423);
+            dockCapBox.Name = "dockCapBox";
+            dockCapBox.PlaceholderText = "Loading Dock Capabilities";
+            dockCapBox.Size = new Size(189, 29);
+            dockCapBox.TabIndex = 12;
+            // 
+            // payMethodBox
+            // 
+            payMethodBox.BorderStyle = BorderStyle.FixedSingle;
+            payMethodBox.Font = new Font("Segoe UI", 12F);
+            payMethodBox.Location = new Point(216, 376);
+            payMethodBox.Name = "payMethodBox";
+            payMethodBox.PlaceholderText = "Payment Method";
+            payMethodBox.Size = new Size(189, 29);
+            payMethodBox.TabIndex = 11;
+            // 
+            // beerLicBox
+            // 
+            beerLicBox.BorderStyle = BorderStyle.FixedSingle;
+            beerLicBox.Font = new Font("Segoe UI", 12F);
+            beerLicBox.Location = new Point(216, 334);
+            beerLicBox.Name = "beerLicBox";
+            beerLicBox.PlaceholderText = "Beer License #";
+            beerLicBox.Size = new Size(189, 29);
+            beerLicBox.TabIndex = 10;
+            // 
+            // zipBox
+            // 
+            zipBox.BorderStyle = BorderStyle.FixedSingle;
+            zipBox.Font = new Font("Segoe UI", 12F);
+            zipBox.Location = new Point(215, 291);
+            zipBox.Name = "zipBox";
+            zipBox.PlaceholderText = "Zip";
+            zipBox.Size = new Size(189, 29);
+            zipBox.TabIndex = 9;
+            // 
+            // stateBox
+            // 
+            stateBox.BorderStyle = BorderStyle.FixedSingle;
+            stateBox.Font = new Font("Segoe UI", 12F);
+            stateBox.Location = new Point(215, 249);
+            stateBox.Name = "stateBox";
+            stateBox.PlaceholderText = "State";
+            stateBox.Size = new Size(189, 29);
+            stateBox.TabIndex = 8;
+            // 
+            // cityBox
+            // 
+            cityBox.BorderStyle = BorderStyle.FixedSingle;
+            cityBox.Font = new Font("Segoe UI", 12F);
+            cityBox.Location = new Point(215, 205);
+            cityBox.Name = "cityBox";
+            cityBox.PlaceholderText = "City";
+            cityBox.Size = new Size(189, 29);
+            cityBox.TabIndex = 7;
+            // 
+            // addressBox
+            // 
+            addressBox.BorderStyle = BorderStyle.FixedSingle;
+            addressBox.Font = new Font("Segoe UI", 12F);
+            addressBox.Location = new Point(215, 160);
+            addressBox.Name = "addressBox";
+            addressBox.PlaceholderText = "Street Address";
+            addressBox.Size = new Size(189, 29);
+            addressBox.TabIndex = 6;
+            // 
+            // fullNameBox
+            // 
+            fullNameBox.BorderStyle = BorderStyle.FixedSingle;
+            fullNameBox.Font = new Font("Segoe UI", 12F);
+            fullNameBox.Location = new Point(214, 115);
+            fullNameBox.Name = "fullNameBox";
+            fullNameBox.PlaceholderText = "Full name";
+            fullNameBox.Size = new Size(189, 29);
+            fullNameBox.TabIndex = 5;
+            // 
+            // addCstmLogo
+            // 
+            addCstmLogo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            addCstmLogo.Image = (Image)resources.GetObject("addCstmLogo.Image");
+            addCstmLogo.InitialImage = (Image)resources.GetObject("addCstmLogo.InitialImage");
+            addCstmLogo.Location = new Point(437, 1);
+            addCstmLogo.Name = "addCstmLogo";
+            addCstmLogo.Size = new Size(157, 105);
+            addCstmLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            addCstmLogo.TabIndex = 4;
+            addCstmLogo.TabStop = false;
+            // 
+            // addCustomerLabel
+            // 
+            addCustomerLabel.AutoSize = true;
+            addCustomerLabel.Font = new Font("Segoe UI", 15F);
+            addCustomerLabel.Location = new Point(245, 20);
+            addCustomerLabel.Name = "addCustomerLabel";
+            addCustomerLabel.Size = new Size(138, 28);
+            addCustomerLabel.TabIndex = 0;
+            addCustomerLabel.Text = "Add Customer";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(879, 661);
+            tableLayoutPanel1.TabIndex = 8;
+            // 
             // associatePortal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -637,6 +657,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             Controls.Add(OrderProccessPanel);
             Controls.Add(customerSbmPanel);
             Controls.Add(addCustomerPanel);
+            Controls.Add(tableLayoutPanel1);
             Name = "associatePortal";
             Text = "Associate Portal";
             Load += Form1_Load;
@@ -652,10 +673,10 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             ((System.ComponentModel.ISupportInitialize)CCLogo).EndInit();
             customerSbmPanel.ResumeLayout(false);
             customerSbmPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             addCustomerPanel.ResumeLayout(false);
             addCustomerPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)addCstmLogo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -709,5 +730,6 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         private TextBox delivConBox;
         private Button cstmSubmitButton;
         private Button cstmCancelButton;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

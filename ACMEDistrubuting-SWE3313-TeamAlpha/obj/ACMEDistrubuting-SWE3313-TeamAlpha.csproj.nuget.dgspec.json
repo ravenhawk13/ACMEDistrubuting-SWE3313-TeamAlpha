@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joshg\\source\\repos\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj": {}
+    "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joshg\\source\\repos\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj": {
+    "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joshg\\source\\repos\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
+        "projectUniqueName": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
         "projectName": "ACMEDistrubuting-SWE3313-TeamAlpha",
-        "projectPath": "C:\\Users\\joshg\\source\\repos\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
-        "packagesPath": "C:\\Users\\joshg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joshg\\source\\repos\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\obj\\",
+        "projectPath": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha.csproj",
+        "packagesPath": "C:\\Users\\Rocke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rocke\\source\\repos\\ravenhawk13\\ACMEDistrubuting-SWE3313-TeamAlpha\\ACMEDistrubuting-SWE3313-TeamAlpha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\joshg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rocke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

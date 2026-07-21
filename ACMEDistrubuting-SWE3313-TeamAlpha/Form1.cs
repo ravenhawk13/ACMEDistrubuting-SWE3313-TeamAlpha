@@ -127,9 +127,9 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            // TODO: replace with real credential check once that backend piece exists.
+            
             loggedInSalesRepId = associateIDBox.Text.Trim();
-
+            
             CCPanel.Visible = true;
             loginPanel.Visible = false;
         }
