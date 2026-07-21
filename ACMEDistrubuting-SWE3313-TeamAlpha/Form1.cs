@@ -7,6 +7,10 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
 {
     public partial class associatePortal : Form
     {
+        private List<Customer> customers = new List<Customer>();
+        private ListBox customerListBox = new ListBox();
+
+
         private readonly RouteDeterminationControl routeDeterminationControl;
 
         // --- Order submission state ---------------------------------------------------
@@ -47,6 +51,13 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             addCustomerPanel.Visible = false;
             OrderProccessPanel.Visible = false;
             routeDeterminationControl.Visible = false;
+
+
+            customerListBox.Location = new Point(18, 250);
+            customerListBox.Size = new Size(250, 250);
+            customerSbmPanel.Controls.Add(customerListBox);
+
+
 
             productCatalog = ProductCatalogService.LoadCatalog();
 
@@ -137,23 +148,44 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+
             loggedInSalesRepId = associateIDBox.Text.Trim();
-            
-            CCPanel.Visible = true;
-            loginPanel.Visible = false;
+
+
+
+            string associateID = associateIDBox.Text;
+            string associatePass = passwordBox.Text;
+
+            if (string.IsNullOrWhiteSpace(associateID) || string.IsNullOrWhiteSpace(associatePass))
+            {
+                loginErrorLabel.Visible = true;
+            }
+            else
+            {
+                CCPanel.Visible = true;
+                loginPanel.Visible = false;
+            }
         }
+        /// <summary>
+        /// Creates a button that lets the user log out of their current session
+        /// </summary>
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
             LogOutPanel.Visible = true;
         }
 
+        /// <summary>
+        /// Creates a button that allows a user to cancel their logout
+        /// </summary>
         private void LogOutNoButton_Click(object sender, EventArgs e)
         {
             LogOutPanel.Visible = false;
         }
 
+        /// <summary>
+        /// Creates a button that allows a user to confirm their logout
+        /// </summary>
         private void LogOutYesButton_Click(object sender, EventArgs e)
         {
             LogOutPanel.Visible = false;
@@ -162,18 +194,28 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             loginPanel.Visible = true;
         }
 
+        /// <summary>
+        /// Creates a button that allows the user to access order submissions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void orderButton_Click(object sender, EventArgs e)
         {
             OrderProccessPanel.Visible = true;
             CCPanel.Visible = false;
         }
 
+        /// <summary>
+        /// creates a button to go to the customer submission panel
+        /// </summary>
         private void customerButton_Click(object sender, EventArgs e)
         {
             CCPanel.Visible = false;
             customerSbmPanel.Visible = true;
         }
-
+        /// <summary>
+        /// creates a button to go back to the CCPanel from the customer submission panel
+        /// </summary>
         private void routeButton_Click(object sender, EventArgs e)
         {
             CCPanel.Visible = false;
@@ -190,12 +232,86 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             CCPanel.BringToFront();
         }
 
+        /// <summary>
+        /// Creates a button that lets the user add a customer
+        /// </summary>
         private void addCustomerButton_Click(object sender, EventArgs e)
         {
             addCustomerPanel.Visible = true;
             customerSbmPanel.Visible = false;
         }
+        /// <summary>
+        /// creates a submit button for the customer submission panel to add a new customer to the list
+        /// </summary>
+        private void cstmSubmitButton_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
 
+            customer.FullName = fullNameBox.Text;
+            customer.Address = addressBox.Text;
+            customer.City = cityBox.Text;
+            customer.State = stateBox.Text;
+            customer.ZipCode = zipBox.Text;
+            customer.BeerLicense = beerLicBox.Text;
+            customer.PaymentMethod = payMethodBox.Text;
+            customer.DockCapabilities = dockCapBox.Text;
+            customer.DeliveryConstraints = delivConBox.Text;
+            customer.POC = pocBox.Text;
+            customer.PhoneNumber = phoneNumBox.Text;
+
+            customers.Add(customer);
+            customerListBox.Items.Add(customer.FullName);
+
+            MessageBox.Show("Customer added successfully!");
+
+            fullNameBox.Clear();
+            addressBox.Clear();
+            cityBox.Clear();
+            stateBox.Clear();
+            zipBox.Clear();
+            beerLicBox.Clear();
+            payMethodBox.Clear();
+            dockCapBox.Clear();
+            delivConBox.Clear();
+            pocBox.Clear();
+            phoneNumBox.Clear();
+
+
+
+        }
+        /// <summary>
+        /// creates a cancel button for the customer submission panel to go back to the customer submission panel
+        /// </summary>
+
+        private void cstmCancelButton_Click(object sender, EventArgs e)
+        {
+            addCustomerPanel.Visible = false;
+            customerSbmPanel.Visible = true;
+        }
+        /// <summary>
+        /// Creates a button that backs out of the customer submission and returns the user back to the control center
+        /// </summary>
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            customerSbmPanel.Visible = false;
+            CCPanel.Visible = true;
+        }
+        /// <summary>
+        /// creates a back button for the customer submission panel to go back to the CCPanel
+        /// </summary>
+        private void customerBackButton_Click(object sender, EventArgs e)
+        {
+            customerSbmPanel.Visible = false;
+            CCPanel.Visible = true;
+        }
+        /// <summary>
+        /// creates a back button for the order process panel to go back to the CCPanel
+        /// </summary>
+        private void orderBackButton_Click(object sender, EventArgs e)
+        {
+            OrderProccessPanel.Visible = false;
+            CCPanel.Visible = true;
+        }
         // --- Order submission handlers ---------------------------------------------------
 
         /// <summary>
@@ -328,5 +444,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
                 MessageBox.Show(ex.Message, "Cannot Submit Order");
             }
         }
+
+
     }
 }

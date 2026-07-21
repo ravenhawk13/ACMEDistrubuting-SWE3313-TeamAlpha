@@ -32,6 +32,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(associatePortal));
             loginPanel = new Panel();
+            loginErrorLabel = new Label();
             loginButton = new Button();
             passwordBox = new TextBox();
             associateIDBox = new TextBox();
@@ -41,6 +42,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             LogOutYesButton = new Button();
             LogOutNoButton = new Button();
             OrderProccessPanel = new Panel();
+            orderBackButton = new Button();
             orderSbmnLabel = new Label();
             addItemButton = new Button();
             quantityLabel = new Label();
@@ -59,6 +61,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             orderButton = new Button();
             LogOutButton = new Button();
             customerSbmPanel = new Panel();
+            backButton = new Button();
             pictureBox2 = new PictureBox();
             addCustomerButton = new Button();
             searchCustomerBox = new TextBox();
@@ -97,6 +100,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // 
             loginPanel.Anchor = AnchorStyles.None;
             loginPanel.BorderStyle = BorderStyle.FixedSingle;
+            loginPanel.Controls.Add(loginErrorLabel);
             loginPanel.Controls.Add(loginButton);
             loginPanel.Controls.Add(passwordBox);
             loginPanel.Controls.Add(associateIDBox);
@@ -106,6 +110,17 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             loginPanel.Name = "loginPanel";
             loginPanel.Size = new Size(594, 650);
             loginPanel.TabIndex = 0;
+            // 
+            // loginErrorLabel
+            // 
+            loginErrorLabel.AutoSize = true;
+            loginErrorLabel.ForeColor = Color.FromArgb(192, 0, 0);
+            loginErrorLabel.Location = new Point(131, 324);
+            loginErrorLabel.Name = "loginErrorLabel";
+            loginErrorLabel.Size = new Size(146, 15);
+            loginErrorLabel.TabIndex = 4;
+            loginErrorLabel.Text = "ID or Password is incorrect";
+            loginErrorLabel.Visible = false;
             // 
             // loginButton
             // 
@@ -209,6 +224,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // 
             OrderProccessPanel.Anchor = AnchorStyles.None;
             OrderProccessPanel.BorderStyle = BorderStyle.FixedSingle;
+            OrderProccessPanel.Controls.Add(orderBackButton);
             OrderProccessPanel.Controls.Add(orderSbmnLabel);
             OrderProccessPanel.Controls.Add(addItemButton);
             OrderProccessPanel.Controls.Add(quantityLabel);
@@ -225,6 +241,16 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             OrderProccessPanel.Size = new Size(594, 650);
             OrderProccessPanel.TabIndex = 2;
             OrderProccessPanel.Visible = false;
+            // 
+            // orderBackButton
+            // 
+            orderBackButton.Location = new Point(17, 591);
+            orderBackButton.Name = "orderBackButton";
+            orderBackButton.Size = new Size(75, 30);
+            orderBackButton.TabIndex = 14;
+            orderBackButton.Text = "Back";
+            orderBackButton.UseVisualStyleBackColor = true;
+            orderBackButton.Click += orderBackButton_Click;
             // 
             // orderSbmnLabel
             // 
@@ -406,6 +432,7 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             // customerSbmPanel
             // 
             customerSbmPanel.Anchor = AnchorStyles.None;
+            customerSbmPanel.Controls.Add(backButton);
             customerSbmPanel.Controls.Add(pictureBox2);
             customerSbmPanel.Controls.Add(addCustomerButton);
             customerSbmPanel.Controls.Add(searchCustomerBox);
@@ -414,6 +441,16 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
             customerSbmPanel.Name = "customerSbmPanel";
             customerSbmPanel.Size = new Size(594, 650);
             customerSbmPanel.TabIndex = 6;
+            // 
+            // backButton
+            // 
+            backButton.Location = new Point(18, 579);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(75, 30);
+            backButton.TabIndex = 4;
+            backButton.Text = "Back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
             // pictureBox2
             // 
@@ -731,5 +768,8 @@ namespace ACMEDistrubuting_SWE3313_TeamAlpha
         private Button cstmSubmitButton;
         private Button cstmCancelButton;
         private TableLayoutPanel tableLayoutPanel1;
+        private Button orderBackButton;
+        private Button backButton;
+        private Label loginErrorLabel;
     }
 }
