@@ -1,0 +1,23 @@
+{
+  "AccountId": "Josh",
+  "DeliveryDate": "2026-07-20T00:00:00",
+  "SalesRepId": "John",
+  "DeliveryRepId": "John",
+  "Items": [
+    {
+      "ItemId": "23547",
+      "ItemName": "BOJANGLES TEA 6/4C",
+      "Quantity": 15
+    },
+    {
+      "ItemId": "10124",
+      "ItemName": "BUD 2/12 CAN",
+      "Quantity": 20
+    },
+    {
+      "ItemId": "530",
+      "ItemName": "CW SPIRITS MARG VP 2/12",
+      "Quantity": 10
+    }
+  ]
+}

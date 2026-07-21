@@ -1,0 +1,11 @@
+Acme Distributing
+
+Account ID#: Josh
+Delivery Date: 07/20/2026
+Sales Rep ID: John Smith
+Delivery Rep ID: John Smith
+
+ID          Item Name                     Quantity  
+Beer        Beer                          15        
+
+Total Items: 15

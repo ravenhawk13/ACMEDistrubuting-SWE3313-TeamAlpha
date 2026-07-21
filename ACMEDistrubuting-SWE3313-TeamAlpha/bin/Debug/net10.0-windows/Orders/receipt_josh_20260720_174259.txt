@@ -1,0 +1,12 @@
+Acme Distributing
+
+Account ID#: josh
+Delivery Date: 07/20/2026
+Sales Rep ID: k
+Delivery Rep ID: k
+
+ID		Item Name			Quantity
+beer		beer		100
+wine		wine		100
+
+Total Items: 200
